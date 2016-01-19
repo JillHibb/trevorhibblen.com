@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'museo-slab';
+  src: url('http://mtmrecognition.s3.amazonaws.com/public/fonts/museo_slab_300-webfont.eot');
+  src: url('http://mtmrecognition.s3.amazonaws.com/public/fonts/museo_slab_300-webfont.eot?#iefix') format('embedded-opentype'),
+  url('http://mtmrecognition.s3.amazonaws.com/public/fonts/museo_slab_300-webfont.woff') format('woff'),
+  url('http://mtmrecognition.s3.amazonaws.com/public/fonts/museo_slab_300-webfont.ttf') format('truetype'),
+  url('http://mtmrecognition.s3.amazonaws.com/public/fonts/museo_slab_300-webfont.svg#museo_slab300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,body {
+  background:transparent;
+  font-family:'museo-slab','gotham' !important;
+  letter-spacing:1px;
+  font-weight:bold;
+  vertical-align:middle;
+  font-size: 24px;
+  color:#073642;
+  text-shadow: 0px 1px 0px #aaa;
+  color:#fff;
+  /*text-shadow:0 -1px 0 #073642;*/
+  height:100%;
+  width:100%;
+  overflow:visible;;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+html, nav {
+  background-attachment: fixed;
+  background-position: left bottom;
+  background-color:#5F7C9E;
+  background-image:url('https://goo.gl/ey7i52');
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family:'gotham' !important;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+.title {
+  padding: 5% 0;
+}
+.title div {
+  padding: 10% 0;
+}
+.title,.footer {
+  text-align:center;
+}
+.title h1 {
+  font-size:125px;
+  text-align:center;
+  line-height:150%;
+}
+nav {
+  padding-top:.5em;
+  padding-bottom:1em;
+  width:100%;
+  text-align:center;
+  position:fixed;
+  bottom:0;
+  box-shadow: 0 0 15px rgba(100,100,100,.5);
+  -moz-box-shadow: 0 0 15px rgba(100,100,100,.5);
+  -webkit-box-shadow: 0 0 15px rgba(100,100,100,.5);
+}
+nav a {
+  color:#fff !important;
+  padding-right:1em;
+}
+.contact {
+  padding: 5% 0;
+  text-align:center;
+  vertical-align:middle;
+}
+.contact h1 {
+  font-size:81px;
+  line-height:1em;
+}
+.contact div {
+  padding: 10% 0;
+}
+@media all and (max-width: 500px) {
+  .contact h1 {
+    font-size:115%;
+  }
+}
+.contact h2 {
+  margin-bottom:1em;
+}
+.contact h3 {
+  font-style:italic;
+}
+.about {
+  padding: 5% 0;
+  padding-left:1em;
+  padding-right:1em;
+}
+.about a {
+  color:#fff !important;
+}
+.about div {
+  padding: 10% 0;
+  padding-left:1em;
+}
+.about h2 {
+  font-size:125px;
+  text-align:center;
+}
+.skillz {
+  padding: 5% 0;
+  padding-left:1em;
+  padding-right:1em;
+}
+.skillz h2 {
+  font-size:125px;
+  text-align:center;
+}
+.skillz .listing {
+  text-align:center;
+  font-size: 30px;
+  padding: 10% 0;
+}
+.skillz .listing li {
+  list-style:none;
+  line-height:2em;
+}
+@media all and (max-width: 500px) {
+  .skillz h2 {
+    font-size:200%;
+  }
+  .skillz .listing {
+    font-size: 20px;
+  }
+}
+.skillz .listing li:hover {
+  text-shadow: 0 -1px 0 #073642;
+  /*color: #073642;*/
+  color:#fff;
+  cursor:default;
+}
+@media all and (max-height: 900px) {
+  .skillz {
+    font-size: 15px;
+  }
+}
+@media all and (max-height: 900px) {
+  .title, .about, .skillz {
+    padding: 0 0;
+  }
+}
+.wedding {
+  position:fixed;
+  height:100%;
+  width:100%;
+  /*background-image:url('https://lh3.googleusercontent.com/ZpP2dsvhBHzQjbEwlBMsV_XrGmBe5LG-yf0HLzEUPZd3dggeenbAUdDsP9KcukveiQGckM8ds62cZw=w2738-h1825-no');*/
+  padding:5% 0;
+}
+.weddingNav,  .wedding {
+  background-repeat: no-repeat;
+  background-image:url('https://lh3.googleusercontent.com/_OfVxLk-Vmq4nSCHPOMoF_qNMf6kMj-bL4kxf_T52Wu9OV9uT-FcVsV5IP_Mp94uFqIJB_8Rhv9ns9bCbra3XiX9hCuvR942b1qIYuF_P-tbVUaDkSQX0rjjmw-XA5SA4tzj_M4oxjDlWZBVeoiObXJYY54yqCNHgBKq_2Df4nHrhClWgzA2H0e8lcrkLxecckZvn20zT2b5vUb8ajO0pLs0DxPWFLCpFJUtUI-lx7EPlmAviJ-2xMhTUG-gyQq32fK9WZ8lRATOdWQDFx3niQc9Akwb_4GQv_S3611Oh8vdoQPYYU9J98Lju00jjXlZ5wqnCPU_L0qt-l4EQhOp5Zm_hPmnnYYWW-q_4fMNmCm6Lmab5A1PRkdEInBqJH_oP2bwhWxnpDwD0A880NaM4WQNDD9RrqV_lnYhJr0Ylii-PUHovLgKnjkK06JK4c5187eRBr8NVYlr9mGHId4Doj8W5vPJWWlNUmh_qT3IQR9lvyckTzGfucXXWCHC3PDdtp61wPmJezfegOzu8uCkpEyL3Ter4KZ392fC4M_dMCtKmG2vqKnyPS0b5FBYHuiWYrQIHQ=w1742-h1160-no');
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-color:#2d2d2d;
+}
+
+@media all and (max-height: 1000px) {
+  .wedding {
+    background-position: center bottom;
+  }
+}
+
+.wedding div {
+  padding:10% 0;
+  text-align: center;
+}
+
+.ng-hide {
+  display:none!important;
+}
+.ng-hide-add, .ng-hide-remove {
+  display:block!important;
+}
+.ng-enter{
+  transition:0.25s ease all;
+  position:fixed;
+  z-index:inherit;
+  left:-100%;
+  height:inherit;
+}
+.ng-leave{
+  transition:0.25s ease all;
+  position:fixed;
+  z-index:9999;
+  right:0;
+}
+.ng-leave-active{
+  transition:0.25s ease all;
+  position:fixed;
+  right:-100%;
+  left:100%;
+}
+.ng-enter-active{
+  transition:0.25s ease all;
+  left:0;
+  position:relative;
+}

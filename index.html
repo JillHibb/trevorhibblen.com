@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <link href="http://fonts.googleapis.com/css?family=Nunito:300,400" rel="stylesheet" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href='site.css' rel='stylesheet'/>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src='app.js'></script>
+</head>
+<body ng-app='trevor'>
+  <div class="">
+    <div ng-view ng-animate ng-cloak></div>
+  </div>
+</body>
+<nav ng-class="{weddingNav:active=='wedding'}">
+  <a ng-class="{active:active==='hi'}" ng-click="active='hi';"
+      href="#/hi">Hi</a>
+  <a
+    ng-class="{active:active==='about'}" ng-click="active='about';"
+    href="#/about">About</a>
+  <a
+    ng-class="{active:active==='background'}" ng-click="active='background';"
+    href="#/background">Background</a>
+  <a
+    ng-class="{active:active==='contact'}" ng-click="active='contact';"
+    href="#/contact">Contact</a>
+    <a
+      ng-class="{active:active==='wedding'}" ng-click="active='wedding';"
+      href="#/iceland">Iceland</a>
+</nav>
+<script async>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71354660-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
