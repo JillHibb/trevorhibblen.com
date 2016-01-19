@@ -2,7 +2,7 @@ var app = angular.module('trevor',['ngRoute','ngAnimate']);
 app.config(['$routeProvider', routes]);
 app.controller('skillsCon', ['$scope', skillsController]);
 app.controller('aboutCon', ['$scope', aboutController]);
-app.controller('weddingCon', ['$scope', weddingController]);
+app.controller('weddingCon', ['$scope','$rootScope', weddingController]);
 
 // setup
 
@@ -53,9 +53,8 @@ function aboutController($scope){
   $scope.remarks = remarks;
 }
 
-function weddingController($scope){
-  $scope.active='wedding';
-  console.log('hey');
+function weddingController($scope, $rootScope){
+  $rootScope.active='wedding';
 }
 
 // templates

@@ -11,23 +11,24 @@
   <div class="">
     <div ng-view ng-animate ng-cloak></div>
   </div>
-</body>
-<nav ng-class="{weddingNav:active=='wedding'}">
-  <a ng-class="{active:active==='hi'}" ng-click="active='hi';"
-      href="#/hi">Hi</a>
-  <a
-    ng-class="{active:active==='about'}" ng-click="active='about';"
-    href="#/about">About</a>
-  <a
-    ng-class="{active:active==='background'}" ng-click="active='background';"
-    href="#/background">Background</a>
-  <a
-    ng-class="{active:active==='contact'}" ng-click="active='contact';"
-    href="#/contact">Contact</a>
+  <nav ng-class="{weddingNav:active=='wedding'}">
+    <a ng-class="{active:active==='hi'}" ng-click="active='hi';"
+        href="#/hi">Hi</a>
     <a
-      ng-class="{active:active==='wedding'}" ng-click="active='wedding';"
-      href="#/iceland">Iceland</a>
-</nav>
+      ng-class="{active:active==='about'}" ng-click="active='about';"
+      href="#/about">About</a>
+    <a
+      ng-class="{active:active==='background'}" ng-click="active='background';"
+      href="#/background">Background</a>
+    <a
+      ng-class="{active:active==='contact'}" ng-click="active='contact';"
+      href="#/contact">Contact</a>
+      <a
+        ng-class="{active:active==='wedding'}" ng-click="active='wedding';"
+        href="#/iceland">Iceland</a>
+  </nav>
+</body>
+
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.min.js"></script>
