@@ -10,14 +10,24 @@ gulp.task('css', function(cb) {
     .pipe(plugins.less())
     .pipe(plugins.cssnano())
     .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(plugins.livereload());
 });
 
 gulp.task('js', function(cb) {
   return gulp.src('./app.js')
     .pipe(plugins.uglify())
     .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(plugins.livereload());
 });
 
-gulp.task('default', ['clean','css','js']);
+//plugins.livereload.listen();
+
+gulp.task('watch', function(cb){
+  plugins.livereload.listen();
+  gulp.watch('*.less', ['css']);
+  gulp.watch('*.js', ['js']);
+});
+
+gulp.task('default', ['clean','css','js','watch']);

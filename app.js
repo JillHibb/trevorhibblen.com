@@ -61,7 +61,6 @@ function weddingController($scope, $rootScope){
 
 function title(){
   return '' +
-  //'<style>html,body { background:#859900; }</style>' +
   '<div class="title">'+
     '<div>' +
     '<span>Hi. My name is</span>'+
@@ -74,7 +73,6 @@ function title(){
 
 function contact(){
   return '' +
-    // '<style>html,body { background:#2aa198; }</style>' +
     '<div class="contact col-md-12 col-sm-12">' +
     '<div>' +
     '<h2>Feel free to email</h2>'+
@@ -84,7 +82,6 @@ function contact(){
 
 function skills(){
   return ''+
-    // '<style>html,body { background:#268bd2; }</style>' +
     '<div class="skillz">' +
     '<h2>Background</h2>'+
       '<ul class="listing"><li ng-repeat="s in skills">{{s}}</li></ul>'+
@@ -100,7 +97,6 @@ function wedding(){
 
 function about(){
   return ''+
-  // '<style>html,body { background:#268bd2; }</style>' +
   '<div class="about">' +
   '<h2>About</h2>' +
   '<div>' +
