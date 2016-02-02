@@ -3,6 +3,7 @@ var plugins = require('gulp-load-plugins')({pattern:['*']});
 
 gulp.task('clean', function(cb) {
   plugins.del('./site.min.css');
+  plugins.del('./app.min.js');
 });
 
 gulp.task('css', function(cb) {
@@ -15,9 +16,9 @@ gulp.task('css', function(cb) {
 });
 
 gulp.task('js', function(cb) {
-  return gulp.src('./app.js')
+  return gulp.src(['./app.js','./controllers/*.js'])
     .pipe(plugins.uglify())
-    .pipe(plugins.rename({suffix: '.min'}))
+    .pipe(plugins.concat('app.min.js'))
     .pipe(gulp.dest('./'))
     .pipe(plugins.livereload());
 });
@@ -27,7 +28,6 @@ gulp.task('js', function(cb) {
 gulp.task('watch', function(cb){
   plugins.livereload.listen();
   gulp.watch('*.less', ['css']);
-  gulp.watch('*.js', ['js']);
 });
 
 gulp.task('default', ['clean','css','js','watch']);

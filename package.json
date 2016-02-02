@@ -4,7 +4,7 @@
   "description": "my s3 site.",
   "main": "index.html",
   "scripts": {
-    "dev": "gulp & http-server"
+    "start": "gulp & http-server"
   },
   "author": "trevor hibblen",
   "license": "ISC",
