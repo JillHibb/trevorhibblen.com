@@ -8,19 +8,19 @@
   function routes($routeProvider){
     $routeProvider
       .when('/',{
-        templateUrl:'/pages/title/title.html'
+        templateUrl:getUrl('title')
       })
       .when('/contact',{
-        templateUrl:'/pages/contact/contact.html'
+        templateUrl:getUrl('contact')
       })
       .when('/background',{
-        templateUrl:'/pages/skills/skills.html'
+        templateUrl:getUrl('skills')
       })
       .when('/about',{
-        templateUrl:'/pages/about/about.html'
+        templateUrl:getUrl('about')
       })
       .when('/iceland',{
-        templateUrl:'/pages/wedding/wedding.html'
+        templateUrl:getUrl('wedding')
       })
       .otherwise({
         redirectTo:'/'
@@ -28,3 +28,7 @@
   }
 
 }());
+
+function getUrl(path){
+  return '/pages/' + path + '/' + path + '.html';
+}

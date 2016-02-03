@@ -7,7 +7,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('css', function(cb) {
-  return gulp.src(['./site.less','./pages/*.less','./pages/**/*.less'])
+  return gulp.src(['./site.less','./pages/*.less','./pages/**/*.less','./directives/*.less','./directives/**/*.less'])
     .pipe(plugins.less())
     .pipe(plugins.cssnano())
     .pipe(plugins.concat('site.min.css'))
@@ -17,7 +17,7 @@ gulp.task('css', function(cb) {
 });
 
 gulp.task('js', function(cb) {
-  return gulp.src(['./app.js','./pages/*.js','./pages/**/*.js'])
+  return gulp.src(['./app.js','./pages/*.js','./pages/**/*.js','./directives/*.js','./directives/**/*.js'])
     // .pipe(plugins.uglify())
     .pipe(plugins.concat('app.min.js'))
     .pipe(gulp.dest('./'))

@@ -1,0 +1,9 @@
+<nav
+  class='nav-home'
+  ng-controller='navHomeCon as navVm'
+  ng-class="{weddingNav:active=='wedding'}">
+  <!-- <a ng-class="{active:active==='hi'}" ng-click="active='hi';"
+      href="#/hi">Hi</a> -->
+  <a ng-repeat='l in navVm.links'
+      href="{{l.link}}">{{l.text}}</a>
+</nav>
