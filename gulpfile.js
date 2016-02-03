@@ -7,17 +7,18 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('css', function(cb) {
-  return gulp.src('./site.less')
+  return gulp.src(['./site.less','./pages/*.less','./pages/**/*.less'])
     .pipe(plugins.less())
     .pipe(plugins.cssnano())
-    .pipe(plugins.rename({suffix: '.min'}))
+    .pipe(plugins.concat('site.min.css'))
+    // .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest('./'))
     .pipe(plugins.livereload());
 });
 
 gulp.task('js', function(cb) {
-  return gulp.src(['./app.js','./controllers/*.js'])
-    .pipe(plugins.uglify())
+  return gulp.src(['./app.js','./pages/*.js','./pages/**/*.js'])
+    // .pipe(plugins.uglify())
     .pipe(plugins.concat('app.min.js'))
     .pipe(gulp.dest('./'))
     .pipe(plugins.livereload());
