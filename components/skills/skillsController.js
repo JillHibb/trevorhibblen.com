@@ -2,6 +2,9 @@
 
   'use strict';
 
+  require('./skills.html');
+  require('./skills.less');
+
   angular
     .module('trevor')
     .controller('skillsCon', skillsController);
