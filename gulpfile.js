@@ -18,7 +18,7 @@ gulp.task('css', function(cb) {
 
 gulp.task('js', function(cb) {
   return gulp.src(['./app.js','./pages/*.js','./pages/**/*.js','./directives/*.js','./directives/**/*.js'])
-    // .pipe(plugins.uglify())
+    .pipe(plugins.uglify())
     .pipe(plugins.concat('app.min.js'))
     .pipe(gulp.dest('./'))
     .pipe(plugins.livereload());
