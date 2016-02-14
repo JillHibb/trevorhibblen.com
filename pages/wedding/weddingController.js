@@ -4,10 +4,9 @@
 
   angular
     .module('trevor')
-    .controller('weddingCon', ['$rootScope', weddingController]);
+    .controller('weddingCon', [weddingController]);
 
-  function weddingController($rootScope){
-    $rootScope.active='wedding';
+  function weddingController(){
   }
 
 }());

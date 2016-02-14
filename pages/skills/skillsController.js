@@ -7,9 +7,9 @@
 
   angular
     .module('trevor')
-    .controller('skillsCon', skillsController);
+    .controller('skillsCon', ['$log', skillsController]);
 
-  function skillsController(){
+  function skillsController($log){
     var _vm = this;
     _vm.skills = [
       'Languages: C#, T-SQL, Javascript',

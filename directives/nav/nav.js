@@ -1,31 +1,38 @@
 ;(function(){
 
-  console.log('nav.js');
-
   'use strict';
 
   angular
     .module('trevor')
-    .controller('navHomeCon', ['$log', navController])
-    .directive('th-nav', navDirective);
+    .directive('navr', [navDirective])
+    .controller('navHomeCon', ['$log','$location', navController]);
 
   function navDirective(){
-    console.log('nav dir');
     return {
         restrict: 'E',
         templateUrl: '/directives/nav/nav.html'
       };
   }
 
-  function navController($log){
-    $log('nav controller ini');
-    _vm = this;
-    _vm.active = 'about';
+  function navController($log, $location){
+    var _vm = this;
+
+    // set active based on the path for new requests and remove the leading '/'
+    _vm.active = ($location.path()||'hi').replace(/^\//,'');
     _vm.links = [
+      { text:'hi', link:'#/hi' },
       { text:'about', link:'#/about' },
       { text:'background', link:'#/background' },
+      { text:'contact', link:'#/contact' },
       { text:'iceland', link:'#/iceland' }
     ];
+    _vm.click = clickHappened;
+
+    // functions
+
+    function clickHappened(navAnchor){
+      _vm.active = navAnchor.text;
+    }
   }
 
 }());
