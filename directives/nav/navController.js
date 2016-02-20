@@ -4,15 +4,7 @@
 
   angular
     .module('trevor')
-    .directive('navr', [navDirective])
     .controller('navHomeCon', ['$log','$location', navController]);
-
-  function navDirective(){
-    return {
-        restrict: 'E',
-        templateUrl: '/directives/nav/nav.html'
-      };
-  }
 
   function navController($log, $location){
     var _vm = this;
