@@ -2,6 +2,9 @@
 
   'use strict';
 
+  const html = require('./title.html');
+  require('./title.less');
+
   angular
     .module('trevor')
     .config(['$routeProvider', routes]);
@@ -9,18 +12,14 @@
   function routes($routeProvider){
     $routeProvider
       .when('/',{
-        templateUrl:getUrl('title')
+        template: html
       })
       .when('/title',{
-        templateUrl:getUrl('title')
+        template: html
       })
       .when('/hi',{
-        templateUrl:getUrl('title')
+        template: html
       });
-
-    function getUrl(path){
-      return '/pages/' + path + '/' + path + '.html';
-    }
   }
 
 }());

@@ -1,28 +1,42 @@
 'use strict';
 
-const webpack = require('webpack'),
-  path = require('path'),
-  APP = __dirname + '/app';
+const webpack = require('webpack');
+const APP = __dirname + '/app';
 
 module.exports = {
   context: APP,
   entry: {
-    app: ['webpack/hot/dev-server', './lib/bootstrap.js']
+    //app: ['webpack/hot/dev-server', './lib/bootstrap.js']
+    app: [
+      `${__dirname}/app.js`
+    ]
   },
   output: {
     path: APP,
-    filename: 'app.js'
+    filename: 'bundled.js'
   },
   module: {
     loaders: [
       {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
+        test: /\.css$/,
+        loader: "style!css?root=."
       },
       {
-        test: /\.css$/,
-        loader: "style!css"
+        test: /\.scss$/,
+        loader: 'style!css!sass?root=.'
       },
+      {
+        test: /\.less$/,
+        loader: "style!css!less?root=."
+      },
+      {
+        test: /\.jpg$|\.png$/,
+        loader: "file-loader"
+      },
+      //{
+      //  test: /\.png$/,
+      //  loader: "url-loader?limit=100000"
+      //},
       {
         test: /\.js$/,
         loader: 'ng-annotate!babel?presets[]=es2015!jshint',
@@ -46,7 +60,11 @@ module.exports = {
     root: APP
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: {
+        except: ['$super', '$', 'exports', 'require']
+      }
+    }),
     new webpack.DefinePlugin({
       MODE: {
         production: process.env.NODE_ENV === 'production'

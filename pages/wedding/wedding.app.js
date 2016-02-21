@@ -2,19 +2,21 @@
 
   'use strict';
 
+  const html = require('./wedding.html');
+  require('./wedding.less');
+
   angular
     .module('trevor')
     .config(['$routeProvider', routes]);
 
   function routes($routeProvider){
     $routeProvider
-      .when('/about',{
-        templateUrl:getUrl('about')
+      .when('/wedding',{
+        template: html
+      })
+      .when('/iceland',{
+        template: html
       });
-
-    function getUrl(path){
-      return '/pages/' + path + '/' + path + '.html';
-    }
   }
 
 }());

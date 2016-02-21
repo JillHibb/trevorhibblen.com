@@ -1,15 +1,13 @@
+
 ;(function(){
 
   'use strict';
 
-  // require('./skills.html');
-  // require('./skills.less');
-
   angular
     .module('trevor')
-    .controller('skillsCon', ['$log', skillsController]);
+    .controller('skillsCon', ['$log', controller]);
 
-  function skillsController($log){
+  function controller($log){
     var _vm = this;
     _vm.skills = [
       'Languages: C#, T-SQL, Javascript',
