@@ -2,8 +2,8 @@
 
   'use strict';
 
-  const html = require('./skills.html');
   require('./skills.less');
+  const skillsHtml = require('./skills.html');
   require('./skills.controller');
 
   angular
@@ -13,10 +13,10 @@
   function routes($routeProvider){
     $routeProvider
       .when('/background',{
-        template: html
+        template: skillsHtml
       })
       .when('/skills',{
-        template: html
+        template: skillsHtml
       });
   }
 

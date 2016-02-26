@@ -6,7 +6,6 @@ const APP = __dirname + '/app';
 module.exports = {
   context: APP,
   entry: {
-    //app: ['webpack/hot/dev-server', './lib/bootstrap.js']
     app: [
       `${__dirname}/app.js`
     ]
@@ -33,10 +32,10 @@ module.exports = {
         test: /\.jpg$|\.png$/,
         loader: "file-loader"
       },
-      //{
-      //  test: /\.png$/,
-      //  loader: "url-loader?limit=100000"
-      //},
+      {
+        test: /\.jpg$|\.png$/,
+        loader: "url-loader?limit=100000"
+      },
       {
         test: /\.js$/,
         loader: 'ng-annotate!babel?presets[]=es2015!jshint',

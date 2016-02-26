@@ -1,0 +1,25 @@
+{
+  "name": "trevorhibblen.com",
+  "description": "my s3 site.",
+  "main": "index.html",
+  "authors": [
+    "trevor hibblen"
+  ],
+  "license": "ISC",
+  "moduleType": ["es6"],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular": "^1.5.0"
+  }
+}

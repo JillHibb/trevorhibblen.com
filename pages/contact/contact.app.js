@@ -2,8 +2,8 @@
 
   'use strict';
 
-  const html = require('./contact.html');
   require('./contact.less');
+  const contactHtml = require('./contact.html');
 
   angular
     .module('trevor')
@@ -12,7 +12,7 @@
   function routes($routeProvider){
     $routeProvider
       .when('/contact',{
-        template: html
+        template: contactHtml
       });
   }
 

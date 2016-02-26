@@ -2,8 +2,8 @@
 
   'use strict';
 
-  const html = require('./title.html');
   require('./title.less');
+  const titleHtml = require('./title.html');
 
   angular
     .module('trevor')
@@ -12,13 +12,13 @@
   function routes($routeProvider){
     $routeProvider
       .when('/',{
-        template: html
+        template: titleHtml
       })
       .when('/title',{
-        template: html
+        template: titleHtml
       })
       .when('/hi',{
-        template: html
+        template: titleHtml
       });
   }
 

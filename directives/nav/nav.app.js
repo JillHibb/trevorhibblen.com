@@ -2,8 +2,8 @@
 
   'use strict';
 
-  const html = require('./nav.html');
   require('./nav.less');
+  const navHtml = require('./nav.html');
   require('./nav.controller');
 
   angular
@@ -13,7 +13,7 @@
   function navDirective(){
     return {
       restrict: 'E',
-      template: html
+      template: navHtml
     };
   }
 

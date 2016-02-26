@@ -2,8 +2,8 @@
 
   'use strict';
 
-  const html = require('./wedding.html');
   require('./wedding.less');
+  const weddingHtml = require('./wedding.html');
 
   angular
     .module('trevor')
@@ -12,10 +12,10 @@
   function routes($routeProvider){
     $routeProvider
       .when('/wedding',{
-        template: html
+        template: weddingHtml
       })
       .when('/iceland',{
-        template: html
+        template: weddingHtml
       });
   }
 
