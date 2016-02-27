@@ -2,6 +2,7 @@
 
   'use strict';
 
+  require('../../images/wedding.jpg');
   require('./wedding.less');
   const weddingHtml = require('./wedding.html');
 

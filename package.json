@@ -5,9 +5,9 @@
   "main": "index.html",
   "private": true,
   "scripts": {
-    "build": "npm install && npm install -g webpack bower && bower install",
-    "test": "rm -rf ./app && webpack",
-    "start": "npm run test && http-server",
+    "build": "npm install && npm install -g bower webpack && bower install",
+    "test": "rm -rf ./app/ && webpack && cp index.html ./app/",
+    "start": "npm run test && http-server ./app/",
     "bower": "rm -rf bower_components/ && bower install"
   },
   "author": "trevor hibblen",

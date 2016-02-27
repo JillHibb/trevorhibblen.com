@@ -6,6 +6,9 @@
   require("./bower_components/bootstrap/dist/css/bootstrap.min.css");
   require('./site.less');
 
+  // images and other files
+  require('./images/sky.jpg');
+
   // core refs
   require("./bower_components/angular/angular.min.js");
   require("./bower_components/angular-animate/angular-animate.min.js");
