@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: APP,
-    filename: 'bundled.js'
+    filename: 'app.min.js'
   },
   module: {
     loaders: [
