@@ -2,6 +2,8 @@
 
   'use strict';
 
+  // more comments
+
   angular.module('trevor',['ngRoute','ngAnimate']);
   angular.module('trevor').config(['$routeProvider', routes]);
 
