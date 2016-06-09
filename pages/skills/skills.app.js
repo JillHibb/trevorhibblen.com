@@ -2,6 +2,10 @@
 
   'use strict';
 
+  require('./skills.less');
+  const skillsHtml = require('./skills.html');
+  require('./skills.controller');
+
   angular
     .module('trevor')
     .config(['$routeProvider', routes]);
@@ -9,15 +13,11 @@
   function routes($routeProvider){
     $routeProvider
       .when('/background',{
-        templateUrl:getUrl('skills')
+        template: skillsHtml
       })
       .when('/skills',{
-        templateUrl:getUrl('skills')
+        template: skillsHtml
       });
-
-    function getUrl(path){
-      return '/pages/' + path + '/' + path + '.html';
-    }
   }
 
 }());

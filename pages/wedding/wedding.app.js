@@ -2,6 +2,10 @@
 
   'use strict';
 
+  require('../../images/wedding.jpg');
+  require('./wedding.less');
+  const weddingHtml = require('./wedding.html');
+
   angular
     .module('trevor')
     .config(['$routeProvider', routes]);
@@ -9,15 +13,11 @@
   function routes($routeProvider){
     $routeProvider
       .when('/wedding',{
-        templateUrl:getUrl('wedding')
+        template: weddingHtml
       })
       .when('/iceland',{
-        templateUrl:getUrl('wedding')
+        template: weddingHtml
       });
-
-    function getUrl(path){
-      return '/pages/' + path + '/' + path + '.html';
-    }
   }
 
 }());

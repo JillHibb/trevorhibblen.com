@@ -2,6 +2,9 @@
 
   'use strict';
 
+  require('./contact.less');
+  const contactHtml = require('./contact.html');
+
   angular
     .module('trevor')
     .config(['$routeProvider', routes]);
@@ -9,12 +12,8 @@
   function routes($routeProvider){
     $routeProvider
       .when('/contact',{
-        templateUrl:getUrl('contact')
+        template: contactHtml
       });
-
-    function getUrl(path){
-      return '/pages/' + path + '/' + path + '.html';
-    }
   }
 
 }());
