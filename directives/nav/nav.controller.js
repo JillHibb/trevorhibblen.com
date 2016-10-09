@@ -15,8 +15,8 @@
       { text:'hi', link:'#/hi' },
       { text:'about', link:'#/about' },
       { text:'background', link:'#/background' },
-      { text:'contact', link:'#/contact' },
-      { text:'iceland', link:'#/iceland' }
+      { text:'contact', link:'#/contact' }
+      // { text:'iceland', link:'#/iceland' }
     ];
     _vm.click = clickHappened;
 
