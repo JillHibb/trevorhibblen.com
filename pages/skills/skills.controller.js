@@ -10,12 +10,12 @@
   function controller($log){
     var _vm = this;
     _vm.skills = [
-      'Languages: C#, T-SQL, Javascript',
-      'Server-side frameworks: .Net MVC/WebApi, .Net Webforms, ExpressJs',
-      'Client-side frameworks: jQuery, AngularJs, ReactJs',
-      'Database: MSSQL, MongoDb, CouchDb, RavenDb',
-      'Tools: Git, IIS, AWS, NodeJs, Visual Studio, Vim, Less, Gulp, Bash, ImageMagick',
-      'Concepts: SOLID, REST, SPA, OWASP'
+      'Languages: C#, Javascript, T-SQL',
+      'Server-side: NodeJs, ExpressJs, .Net MVC/WebApi, .Net Webforms',
+      'Client-side: jQuery, AngularJs, ReactJs',
+      'Database: MSSQL, MySQL, MongoDb, Redis, RavenDb / Mongoose, NHibernate, PetaPoco',
+      'Tools: AWS, Docker Compose, RabbitMQ, IIS, Bash, Git, Less, SASS, Gulp, Webpack, Visual Studio',
+      'Concepts: SOLID, DDD, DRY, REST, SPA, OWASP, 12 Factor App'
     ];
   }
 

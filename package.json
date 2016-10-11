@@ -6,13 +6,13 @@
   "private": true,
   "scripts": {
     "build": "npm install && npm run bower",
-    "webpack":"node ./node_modules/webpack/bin/webpack >> /dev/null",
-    "bower": "rm -rf bower_components/; node ./node_modules/bower/bin/bower install",
+    "webpack":"webpack >> /dev/null",
+    "bower": "rm -rf bower_components/; bower install",
     "setup": "rm -rf ./app/",
     "test": "npm run setup; npm run webpack",
     "deploy": "npm test && cp index.html ./app/",
-    "start": "npm run deploy && node ./node_modules/http-server/bin/http-server ./app/",
-    "restart": "node ./node_modules/http-server/bin/http-server ./app/"
+    "start": "npm run deploy && http-server ./app/",
+    "restart": "http-server ./app/"
   },
   "author": "trevor hibblen",
   "license": "ISC",
