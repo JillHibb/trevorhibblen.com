@@ -5,14 +5,12 @@
   "main": "index.html",
   "private": true,
   "scripts": {
-    "build": "npm install && npm run bower",
-    "webpack":"webpack >> /dev/null",
-    "bower": "rm -rf bower_components/; bower install",
-    "setup": "rm -rf ./app/",
-    "test": "npm run setup; npm run webpack",
-    "deploy": "npm test && cp index.html ./app/",
-    "start": "npm run deploy && http-server ./app/",
-    "restart": "http-server ./app/"
+    "build": "npm install && npm run _clean && npm run _bower && npm run _webpack",
+    "start": "http-server ./app/",
+    "test":"npm run _webpack",
+    "_webpack":"webpack 1> /dev/null",
+    "_bower": "rm -rf bower_components/; bower install",
+    "_clean": "rm -rf ./app/"
   },
   "author": "trevor hibblen",
   "license": "ISC",
